@@ -25,7 +25,7 @@ class PlantsController < ApplicationController
   end
 
   def update
-    @plant = Plant.find(params[:id])
+    set_plant
 
     respond_to do |format|
       if @plant.update(plant_params)
@@ -40,7 +40,7 @@ class PlantsController < ApplicationController
   end
 
   def destroy
-    @plant = Plant.find(params[:id])
+    set_plant
 
     @plant.destroy
       respond_to do |format|
