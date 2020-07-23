@@ -8,7 +8,7 @@ class PlantsController < ApplicationController
   end
 
   def create
-    @plant = Plant.new(params.require(:plant).permit(:title, :date_acquired, :lighting_preference, :watering_frequency, :last_watered))
+    @plant = Plant.new(plant_params)
 
     respond_to do |format|
       if @plant.save
@@ -20,14 +20,13 @@ class PlantsController < ApplicationController
   end
 
   def edit
-    @plant = Plant.find(params[:id])
   end
 
   def update
     @plant = Plant.find(params[:id])
 
     respond_to do |format|
-      if @plant.update(params.require(:plant).permit(:title, :date_acquired, :lighting_preference, :watering_frequency, :last_watered))
+      if @plant.update(plant_params)
         format.html { redirect_to plants_path, notice: 'Your plant has been updated 🌳' }
       else
         format.html { render :edit }
@@ -36,7 +35,6 @@ class PlantsController < ApplicationController
   end
 
   def show
-    @plant = Plant.find(params[:id])
   end
 
   def destroy
@@ -46,5 +44,11 @@ class PlantsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to plants_path, notice: 'Your plant was successfully destroyed 💣' }
     end
+  end
+
+  private
+
+  def plant_params
+    params.require(:plant).permit(:title, :date_acquired, :lighting_preference, :watering_frequency, :last_watered)
   end
 end
