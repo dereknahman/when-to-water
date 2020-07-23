@@ -1,0 +1,34 @@
+<h1>Tell me what's changed about your plant 🥦</h1>
+
+<%= form_for(@plant) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_acquired %>
+    <%= form.text_field :date_acquired %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lighting_preference %>
+    <%= form.text_area :lighting_preference %>
+  </div>
+
+  <div class="field">
+    <%= form.label :watering_frequency %>
+    <%= form.text_area :watering_frequency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_watered %>
+    <%= form.text_area :last_watered %>
+  </div>
+
+  <%= link_to 'Cancel', plants_path %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
