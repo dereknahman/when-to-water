@@ -13,7 +13,7 @@ puts "we are fetching you some plants 🌱"
         title: "My plant number #{plant}",
         date_acquired: "March 2029",
         lighting_preference: "sunny spots",
-        watering_frequency: "every three weeks",
+        # watering_frequency: "every three weeks",
         last_watered: "three weeks ago"
     )
 end

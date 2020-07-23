@@ -9,7 +9,6 @@
     <h2>Plant name: <%= plant.title %></h2>
     <p>Date acquired: <%= plant.date_acquired %></p>
     <p>Lighting preferences: <%= plant.lighting_preference %></p>
-    <p>Watering frequency: <%= plant.watering_frequency %></p>
     <p>Last watered: <%= plant.last_watered %></p>
     <%= link_to "Edit", edit_plant_path(plant) %>
     <%= link_to 'Delete this plant', plant_path(plant), method: :delete, data: { confirm: 'Are you sure you want to kill this plant? 🚩' } %>

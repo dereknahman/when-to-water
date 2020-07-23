@@ -1,6 +1,6 @@
 <h1>Tell me about your new plant 🌱</h1>
 
-<%= form_for(@plant) do |form| %>
+<%= form_with model: @plant do |form| %>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
@@ -8,7 +8,7 @@
 
   <div class="field">
     <%= form.label :date_acquired %>
-    <%= form.text_field :date_acquired %>
+    <%= form.date_select :date_acquired, :order => [:day, :month, :year] %>
   </div>
 
   <div class="field">
@@ -17,13 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :watering_frequency %>
-    <%= form.text_area :watering_frequency %>
-  </div>
-
-  <div class="field">
     <%= form.label :last_watered %>
-    <%= form.text_area :last_watered %>
+    <%= form.date_select :last_watered, :order => [:day, :month, :year] %>
   </div>
 
   <%= link_to 'Cancel', plants_path %>
