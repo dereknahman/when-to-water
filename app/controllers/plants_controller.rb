@@ -51,7 +51,7 @@ class PlantsController < ApplicationController
   private
 
   def plant_params
-    params.require(:plant).permit(:title, :lighting_preference)
+    params.require(:plant).permit(:title, :lighting_preference, :main_image, :thumb_image)
   end
 
   def set_plant
