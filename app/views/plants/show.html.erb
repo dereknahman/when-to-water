@@ -1,7 +1,6 @@
-<h1>This is the plant show page</h1>
-
 <h1><%= @plant.title %></h1>
 
+<%= image_tag @plant.main_image %>
 <em>Date acquired: <%= @plant.date_acquired %></em>
 <p>Lighting preference: <%= @plant.lighting_preference %></p>
 <p>Last watered: <%= @plant.last_watered %></p>

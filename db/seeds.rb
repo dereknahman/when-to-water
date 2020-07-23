@@ -6,15 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# need to add watering_frequency to this when i work out how
+
 puts "we are fetching you some plants 🌱"
+
+# d1 = Date.new(2015,22,06)
+# d2 = Date.new(2020,11,06)
 
 10.times do |plant|
     Plant.create!(
         title: "My plant number #{plant}",
-        date_acquired: "March 2029",
-        lighting_preference: "sunny spots",
-        # watering_frequency: "every three weeks",
-        last_watered: "three weeks ago"
+        main_image: "https://via.placeholder.com/600x400",
+        thumb_image: "https://via.placeholder.com/350x200", 
+        # date_acquired: d1,
+        lighting_preference: "sunny spot",
+        # last_watered: d2
     )
 end
 

@@ -7,6 +7,9 @@
 
 <% @plants.each do |plant| %>
     <h2>Plant name: <%= plant.title %></h2>
+
+    <%= image_tag plant.thumb_image unless plant.thumb_image.nil? %>
+
     <p>Date acquired: <%= plant.date_acquired %></p>
     <p>Lighting preferences: <%= plant.lighting_preference %></p>
     <p>Last watered: <%= plant.last_watered %></p>
