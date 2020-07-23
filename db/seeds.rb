@@ -18,9 +18,7 @@ puts "we are fetching you some plants 🌱"
         title: "My plant number #{plant}",
         main_image: "https://via.placeholder.com/600x400",
         thumb_image: "https://via.placeholder.com/350x200", 
-        # date_acquired: d1,
         lighting_preference: "sunny spot",
-        # last_watered: d2
     )
 end
 

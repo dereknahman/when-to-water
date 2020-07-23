@@ -2,14 +2,8 @@
 
 one:
   title: MyString
-  date_acquired: MyString
   lighting_preference: MyString
-  watering_frequency: MyString
-  last_watered: MyString
 
 two:
   title: MyString
-  date_acquired: MyString
   lighting_preference: MyString
-  watering_frequency: MyString
-  last_watered: MyString

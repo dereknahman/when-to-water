@@ -10,9 +10,7 @@
 
     <%= image_tag plant.thumb_image unless plant.thumb_image.nil? %>
 
-    <p>Date acquired: <%= plant.date_acquired %></p>
     <p>Lighting preferences: <%= plant.lighting_preference %></p>
-    <p>Last watered: <%= plant.last_watered %></p>
     <%= link_to "Edit", edit_plant_path(plant) %>
     <%= link_to "View plant", plant_show_path(plant) %>
     <%= link_to 'Delete this plant', plant_path(plant), method: :delete, data: { confirm: 'Are you sure you want to kill this plant? 🚩' } %>

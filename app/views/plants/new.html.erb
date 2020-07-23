@@ -7,18 +7,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :date_acquired %>
-    <%= form.date_select :date_acquired, :order => [:day, :month, :year] %>
-  </div>
-
-  <div class="field">
     <%= form.label :lighting_preference %>
     <%= form.text_area :lighting_preference %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_watered %>
-    <%= form.date_select :last_watered, :order => [:day, :month, :year] %>
   </div>
 
   <%= link_to 'Cancel', plants_path %>
